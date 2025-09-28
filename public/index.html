@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Data Analysis Agent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏥 Healthcare Data Insights Agent</h1>
+            <p>Upload healthcare datasets and ask questions about your data</p>
+        </header>
+
+        <div class="main-content">
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <input type="file" id="fileInput" accept=".csv" />
+                    <p>Drop CSV file here or click to upload</p>
+                </div>
+                <div id="datasetInfo" class="dataset-info hidden">
+                    <h3>Current Dataset</h3>
+                    <p id="datasetDetails"></p>
+                </div>
+            </div>
+
+            <div class="chat-section">
+                <div id="chatMessages" class="chat-messages"></div>
+                <div class="chat-input-section">
+                    <input 
+                        type="text" 
+                        id="chatInput" 
+                        placeholder="Ask about your healthcare data..."
+                        disabled
+                    />
+                    <button id="sendButton" disabled>Send</button>
+                </div>
+            </div>
+
+            <div class="analysis-section" id="analysisResults">
+                <!-- Analysis results will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

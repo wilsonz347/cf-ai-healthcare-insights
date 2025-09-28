@@ -1,0 +1,22 @@
+name = "cf-ai-healthcare-insights"
+compatibility_date = "2025-09-28"
+main = "src/index.ts"
+
+[durable_objects]
+bindings = [
+  { name = "HEALTHCARE_AGENT", class_name = "HealthcareAgent" }
+]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["HealthcareAgent"]
+
+[ai]
+binding = "AI"
+
+[assets]
+directory = "public"
+binding = "ASSETS"
+
+[vars]
+ENVIRONMENT = "development"
